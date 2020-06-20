@@ -25,6 +25,7 @@ fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
 
     val s = scan.nextLine()
+    scan.next("\n")
 
     val result = timeConversion(s)
 
