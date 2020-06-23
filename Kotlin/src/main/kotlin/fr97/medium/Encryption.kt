@@ -7,9 +7,8 @@ import kotlin.math.sqrt
 
 fun encryption(s: String): String {
     val withoutSpaces = s.filterNot { it == ' ' }
-    val lengthSqrt = sqrt(withoutSpaces.length.toDouble())
-    val optimalRow = lengthSqrt.toInt()
-    val col = if(withoutSpaces.length > optimalRow*optimalRow) optimalRow+1 else optimalRow
+    val lengthSqrt = sqrt(withoutSpaces.length.toDouble()).toInt()
+    val col = if(withoutSpaces.length > lengthSqrt*lengthSqrt) lengthSqrt+1 else lengthSqrt
 
     val matrix = withoutSpaces
         .chunked(col)
