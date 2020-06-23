@@ -8,15 +8,17 @@ import kotlin.text.*
 
 // Complete the minimumLoss function below.
 fun minimumLoss(price: Array<Long>): Int {
-    return price
-        .sortedArray()
+    val mappedByPrice = price.mapIndexed { i, p -> p to i.toLong() }.toMap()
+    val sorted = price.sortedArray()
+    return sorted
         .foldIndexed(Long.MAX_VALUE) { i, min, p ->
-            val prevPrice = if (i == 0) 0 else price[i-1]
-
-            if (p - prevPrice in 1 until min)
-                p - prevPrice
-            else
-                min
+            val prevPrice = if (i == 0) 0 else sorted[i - 1]
+            when {
+                i == 0 -> min
+                mappedByPrice.getOrDefault(p, 0L) < mappedByPrice.getOrDefault(prevPrice, 0L)
+                        && p - prevPrice in 1 until min -> p - prevPrice
+                else -> min
+            }
         }.toInt()
 }
 
