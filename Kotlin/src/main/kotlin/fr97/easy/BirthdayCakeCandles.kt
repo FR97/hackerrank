@@ -5,7 +5,7 @@ import kotlin.collections.*
 import kotlin.io.*
 import kotlin.text.*
 
-// Complete the birthdayCakeCandles function below.
+
 fun birthdayCakeCandles(ar: Array<Int>): Int {
     val max = ar.max() ?: 0
     return ar.filter { it == max }.size
@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
 
     val arCount = scan.nextLine().trim().toInt()
 
-    val ar = scan.nextLine().split(" ").map{ it.trim().toInt() }.toTypedArray()
+    val ar = scan.nextLine().split(" ").map { it.trim().toInt() }.toTypedArray()
 
     val result = birthdayCakeCandles(ar)
 

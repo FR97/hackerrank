@@ -2,6 +2,7 @@ package fr97.easy
 
 import java.util.*
 
+
 fun timeConversion(s: String): String {
     val amPm = s.substring(s.length - 2)
     val time = s.substring(0, s.length - 2).split(":")

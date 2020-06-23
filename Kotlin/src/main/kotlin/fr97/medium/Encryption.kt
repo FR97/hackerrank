@@ -5,6 +5,7 @@ import java.util.*
 import kotlin.io.*
 import kotlin.math.sqrt
 
+
 fun encryption(s: String): String {
     val withoutSpaces = s.filterNot { it == ' ' }
     val lengthSqrt = sqrt(withoutSpaces.length.toDouble()).toInt()

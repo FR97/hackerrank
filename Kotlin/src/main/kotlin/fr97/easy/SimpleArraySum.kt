@@ -3,13 +3,8 @@ package fr97.easy
 
 import java.util.*
 
-/*
- * Complete the simpleArraySum function below.
- */
+
 fun simpleArraySum(ar: Array<Int>): Int {
-    /*
-     * Write your code here.
-     */
     return ar.sum()
 }
 

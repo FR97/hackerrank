@@ -6,15 +6,8 @@ import kotlin.math.abs
 import kotlin.ranges.*
 import kotlin.text.*
 
-/*
- * Complete the 'diagonalDifference' function below.
- *
- * The function is expected to return an INTEGER.
- * The function accepts 2D_INTEGER_ARRAY arr as parameter.
- */
 
 fun diagonalDifference(arr: Array<Array<Int>>): Int {
-    // Write your code here
     return abs(arr.indices.sumBy { arr[it][it] - arr[it][arr.size - 1 - it] })
 }
 

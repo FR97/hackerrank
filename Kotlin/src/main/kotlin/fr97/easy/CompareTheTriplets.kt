@@ -5,7 +5,7 @@ import kotlin.io.*
 
 import kotlin.text.*
 
-// Complete the compareTriplets function below.
+
 fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
     return a.mapIndexed { i, score -> score.compareTo(b[i]) }
         .filter { it != 0 }

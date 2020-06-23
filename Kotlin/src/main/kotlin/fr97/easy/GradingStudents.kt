@@ -19,15 +19,8 @@ import kotlin.ranges.*
 import kotlin.sequences.*
 import kotlin.text.*
 
-/*
- * Complete the 'gradingStudents' function below.
- *
- * The function is expected to return an INTEGER_ARRAY.
- * The function accepts INTEGER_ARRAY grades as parameter.
- */
 
 fun gradingStudents(grades: Array<Int>): List<Int> {
-    // Write your code here
     return grades.map {
         when {
             it >= 38 -> if (it % 5 > 2) it + 5 - (it % 5) else it

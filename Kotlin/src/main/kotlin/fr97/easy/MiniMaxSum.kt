@@ -5,6 +5,7 @@ import kotlin.collections.*
 import kotlin.io.*
 import kotlin.text.*
 
+
 fun miniMaxSum(arr: Array<Int>): Unit {
     val arrLong = arr.map { it.toLong() }
     val min = arrLong.sum() - arr.max()!!
