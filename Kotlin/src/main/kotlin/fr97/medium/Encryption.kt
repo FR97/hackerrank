@@ -22,9 +22,7 @@ fun encryption(s: String): String {
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
-
     val s = scan.nextLine()
-
     val result = encryption(s)
 
     println(result)
