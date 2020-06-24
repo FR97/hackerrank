@@ -5,17 +5,17 @@ import java.util.*
 
 // Complete the whatFlavors function below.
 fun whatFlavors(cost: Array<Int>, money: Int): Unit {
-    val mappedByPrice = cost.mapIndexed { i, c -> c to i + 1 }.toMap()
+    val map = mutableMapOf<Int, Int>()
 
     for (i in cost.indices) {
-
-        val price = cost[i]
+        val id = i + 1
+        val price: Int = cost[i]
         val leftover = money - price
-        val id = mappedByPrice.getOrDefault(leftover, -1)
 
-        if (id != i + 1 && id > 0) {
-            println("${i + 1} ${mappedByPrice[leftover]}")
+        if (map.containsKey(leftover)) {
+            println("${map[leftover]} $id")
         }
+        map.putIfAbsent(price, id)
     }
 }
 
