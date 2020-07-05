@@ -11,7 +11,7 @@ fun maximumSum(a: Array<Long>, m: Long): Long {
         else powerSet(a.sliceArray(1 until a.size)).let { it + it.map { it + a.first() } }
 
     // Fold over powerset to find maximum sum % m
-    return powerSet(a).fold(0L) { curr, arr -> max(curr, arr.sum()%m)  }
+    return powerSet(a).fold(0L) { curr, arr -> max(curr, arr.sum() % m) }
 }
 
 fun main(args: Array<String>) {
